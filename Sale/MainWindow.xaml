@@ -30,6 +30,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
                    Content="Монитор" FontSize="20" FontWeight="DemiBold" 
@@ -45,12 +46,48 @@
                    x:Name="MonitorDepartments" HorizontalAlignment="Center"/>
             
             <Label Grid.Column="0" Grid.Row="3" Content="Продуктов" />
-            <Label Grid.Column="1" Grid.Row="3" Content="0" 
+            <Label Grid.Column="1" Grid.Row="3" Content="100000" 
                    x:Name="MonitorProducts" HorizontalAlignment="Center"/>
 
             <Label Grid.Column="0" Grid.Row="4" Content="Менеджеров"/>
-            <Label Grid.Column="1" Grid.Row="4" Content="0" 
+            <Label Grid.Column="1" Grid.Row="4" Content="55" 
                    x:Name="MonitorManagers" HorizontalAlignment="Center"/>
+
+            <Label Grid.Column="0" Grid.Row="5" Content="Продаж"/>
+            <Label Grid.Column="1" Grid.Row="5" Content="124235" 
+                   x:Name="MonitorSales" HorizontalAlignment="Center"/>
+
+
+        </Grid>
+
+        <Grid Grid.Row = "1"  ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  
+                   Content="Статистика за день" FontSize="20" FontWeight="DemiBold" 
+                   HorizontalAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="Продаж (чеков)" />
+            <Label Grid.Column="1" Grid.Row="1" x:Name="StatTotalSales" HorizontalAlignment="Center" />
+
+            <Label Grid.Column="0" Grid.Row="2" Content="Продаж (товаров)" />
+            <Label Grid.Column="1" Grid.Row="2" x:Name="StatTotalProducts" HorizontalAlignment="Center" />
+
+            <Label Grid.Column="0" Grid.Row="3" Content="Продаж (грн)" />
+            <Label Grid.Column="1" Grid.Row="3" x:Name="StatTotalMoney" HorizontalAlignment="Center" />
+            <Grid/>
+
+
+
         </Grid>
     </Grid>
 
