@@ -72,6 +72,7 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  
                    Content="Статистика за день" FontSize="20" FontWeight="DemiBold" 
@@ -84,12 +85,55 @@
 
             <Label Grid.Column="0" Grid.Row="3" Content="Продаж (грн)" />
             <Label Grid.Column="1" Grid.Row="3" x:Name="StatTotalMoney" HorizontalAlignment="Center" />
+
+            <Label Grid.Column="0" Grid.Row="4" Content="ТОП 1 менеджер" />
+            <Label Grid.Column="1" Grid.Row="4" x:Name="StatTopManager" HorizontalAlignment="Center" />
+
+            <Label Grid.Column="0" Grid.Row="5" Content="ТОП 1 менеджер" />
+            <Label Grid.Column="1" Grid.Row="5" x:Name="StatTopDepart" HorizontalAlignment="Center" />
+
+            <Label Grid.Column="0" Grid.Row="6" Content="ТОП 1 товар" />
+            <Label Grid.Column="1" Grid.Row="6" x:Name="StatTopProduct" HorizontalAlignment="Center" />
             <Grid/>
 
-
-
         </Grid>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+            <Label Content="Отделы" FontSize = "20" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="DepartmentCell"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Label Content="Товары" FontSize="20" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="180">
+                <TextBlock x:Name="ProductsCell" />
+            </ScrollViewer>
+        </StackPanel>
+        <!-- End Products -->
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical">
+            <Label Content="Менеджеры" FontSize = "20" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="180">
+                <TextBlock x:Name="ManagersCell"/>
+            </ScrollViewer>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical">
+            <Label Content="Продажи за день" FontSize = "20" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="180">
+                <TextBlock x:Name="TodaySalesCell"/>
+            </ScrollViewer>
+        </StackPanel>
+
     </Grid>
 
+   
     
+    
+
+
+
+
+
+
 </Window>
