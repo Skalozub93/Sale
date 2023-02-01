@@ -34,8 +34,8 @@ namespace Sale
         public MainWindow()
         {
             InitializeComponent();
-            String ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\L\source\repos\Sale\Sale\Sales.mdf;Integrated Security=True";
-            _connection = new(ConnectionString);
+            // создание обьекта-подключения!!!
+            _connection = new(App.ConnectionString);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -315,7 +315,13 @@ namespace Sale
             }
         }
 
-
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (_connection?.State == ConnectionState.Open)
+            {
+                _connection.Close();
+            }
+        }
     }
 
 }

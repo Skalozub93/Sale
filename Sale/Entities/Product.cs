@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sale.Entities
 {
-    internal class Product
+    public class Product
     {
         public Guid Id { get; set; }
         public String Name { get; set; } = null!;

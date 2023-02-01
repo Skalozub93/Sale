@@ -13,5 +13,6 @@ namespace Sale
     /// </summary>
     public partial class App : Application
     {
+        public const String ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\L\source\repos\Sale\Sale\Sales.mdf;Integrated Security=True";
     }
 }
